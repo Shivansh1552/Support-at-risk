@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/public/styleCoro.css">
+    <!-- <link rel="stylesheet" href="https://www.youtube.com/s/player/17480f7d/www-player-sprite-mode.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+    <link rel = "icon" href = "./images/logo.png" type = "image/x-icon">
+      <link href="https://fonts.googleapis.com/css?family=Merienda|Raleway" rel="stylesheet">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <title>amity_project</title>
+      <style>
+         .space
+          {
+            margin-left: 40px;
+          }
+
+          .navbar-nav li a{
+            border-bottom: 1px solid transparent;
+          }
+
+          .navbar-nav li a:hover{
+            border-bottom: 1px solid black;
+          }
+
+          .navbar-nav li a:active{
+            border-bottom: 1px solid black;
+          }
+      </style>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+
+     <%- include("./partials/navbar") -%>
+    <div class="container">  <!--this one for id = home-->
+
+        <!--Dropdown in the menu left to be added-->
+
+        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+        <h1 style="text-align: center;  font-family: 'Raleway', sans-serif;">SPREADING AWARENESS</h1>
+        <div class="topnav" id="myTopnav">
+            <a href="#About" id="btn">About</a>
+            <a href="#History" id="btn">History</a>
+            <a href="#NumberGame" id="btn">Numbers Matter</a>
+            <a href="#Symptoms" id="btn">Symptoms</a>
+            <a href="#Treatment" id="btn">Treatment</a>
+            <a href="#Precaution" id="btn">Precaution</a>
+            <a href="#MythsFacts" id="btn">Myths and Facts</a>
+            <a href="#Recovery" id="btn">Recovery Stories</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <!--Slideshow of Images-->
+        <!-- Full-width images with number text -->
+        <div class="mySlides">
+        <div class="numbertext"></div>
+            <img src="public/images/SlidePic1.jpg" style="width:100%; height:100%;" alt="Microscopic view of Coronavirus">
+        </div>
+
+        <div class="mySlides">
+        <div class="numbertext"></div>
+            <img src="public/images/pandemic.jpg" style="width:100%; height:100%;" alt="Declaring global pandemic">
+        </div>
+
+        <div class="mySlides">
+        <div class="numbertext"></div>
+            <img src="public/images/tourism.jpg" style="width:100%; height:100%;" alt="Low Tourism">
+        </div>
+
+        <div class="mySlides">
+        <div class="numbertext"></div>
+            <img src="public/images/StockMarketCrash.jpeg" style="width:100%; height:100%;" alt="Stock Market Crash">
+        </div>
+
+        <div class="mySlides">
+        <div class="numbertext"></div>
+            <img src="public/images/BB118Ymo.jfif" style="width:100%; height:100%;" alt="Olympics' Future doubtful">
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Image text -->
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+
+        <!-- Thumbnail images -->
+        <div class="row">
+            <div class="column">
+                <img class="demo cursor" src="public/images/SlidePic1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Microscopic view of Novel Coronavirus">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="public/images/pandemic.jpg" style="width:100%" onclick="currentSlide(2)" alt="COVID-19 being declared a global pandemic by WHO Director General, Dr Tedros Adhanom Ghebreyesus, on 11 March 2020">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="public/images/tourism.jpg" style="width:100%" onclick="currentSlide(3)" alt="Tourism sector gets badly affected">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="public/images/StockMarketCrash.jpeg" style="width:100%" onclick="currentSlide(4)" alt="Stock markets all over the world crash down">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="public/images/BB118Ymo.jfif" style="width:100%" onclick="currentSlide(5)" alt="Future of Olympics at stake due to the situation, with players and olympic associations of different countries opposing its conduct">
+            </div>
+        </div>
+        <br><br>
+    </div> <!--this one for class = container-->
+
+    <!--ABOUT-->
+    <div id="About">
+        <h1 style="text-align: center;  font-family: 'Raleway', sans-serif;">About Coronaviruses and COVID-19</h1>
+        <p><strong style="color: black; font-weight: bolder;">CORONAVIRUS</strong> are a group of related viruses that cause diseases in mammals and birds. In humans, coronaviruses cause respiratory tract infections that can be mild, such as some cases of the common cold
+            (among other possible causes, predominantly rhinoviruses), and others that can be lethal, such as Severe Acute Respiratory Syndrome (SARS-CoV), Middle East Respiratory Syndrome (MERS-CoV), and the present-day
+            global pandemic, COVID-19.<br><br>
+            WHEREAS,<BR>
+            <strong style="color: black; font-weight: bolder;">CORONAVIRUS DISEASE (COVID-19)</strong> is the infectious disease caused by the newly discovered member of Coronavirus family, the Novel Coronavirus, which has a structure slightly different from other members of the virus family.
+            It is typically spread from one person to another via respiratory droplets produced during coughing. It may also be spread from touching contaminated surfaces and then touching one's face <br><br>
+            Coronaviruses are zoonotic (check the <a href="https://docs.google.com/document/d/1648tc38UEYxdZjUwYV5wLvec8a0KWZdYshftqkKQGSU/edit?usp=sharing" target="_blank">glossary</a>) in nature.<br><br>
+            So to remember, coronavirus is a family of viruses, and COVID-19 is the disease cause by the novel Coronavirus.
+            </BR>
+        </p>
+    </div>
+    <br><br>
+
+    <!--HISTORY-->
+    <div id="History">
+        <h1 style="text-align: center; font-family: 'Raleway', sans-serif;">HISTORY</h1>
+        <p>The disease appears to have originated from a Wuhan seafood market, a port city of 11 million people in the central Hubei province, where wild animals, including marmots, birds, rabbits, bats and snakes, are traded illegally.<br><br>
+            Such markets pose a heightened risk of viruses jumping from animals to humans because hygiene standards are difficult to maintain if live animals are being kept and butchered on site. Typically, they are also densely packed.<br><br>
+            The animal source of the latest outbreak has not yet been identified, but the original host is thought to be bats. Bats were not sold at the Wuhan market but may have infected live chickens or other animals sold there. <br><br>
+            This came into notice when on December 31 last year, China alerted WHO to several cases of unusual pneumonia in Wuhan.
+        </p>
+    </div>
+    <br><br>
+
+    <!--NUMBER GAME-->
+    <div id="NumberGame">
+        <h1 style="text-align: center; font-family:'Raleway', sans-serif;color: black">NUMBERS MATTER..</h1>
+                <img src="./images/number_mat.png" style="height: auto; width: 80%;" alt="Stats"><br><br>
+        <h1 style="color: red">Serious, isn't it?</h1>
+        <p style="color: black;font-size: large"> To see the proper visualisation of COVID-19 cases all over the world,<a href="file:///C:/Users/SHIVANSH/Desktop/CoroIndex-master/index.html#NumberGame" onclick="myfunction()" id="data_btn" style ="text-decoration: none"> Click here</a></p>
+
+
+    </div>
+    <br><br>
+
+    <!--SYMPTOMS-->
+    <div id="Symptoms">
+        <h1 style="text-align: center; font-family: 'Raleway', sans-serif;">SYMPTOMS</h1>
+        <div class="sympt_flex">
+        <div class="h">
+            <!--Cough-->
+            <img src="public/images/symptomCough.jpg" alt="Cough" class="imageC">
+            <div class="overlayC">
+                <div class="textC">Dry cough, sore throat and flu like symptoms</div>
+            </div>
+            <br><br>
+        </div>
+        <div class="h">
+            <!--Fever-->
+            <img src="public/images/symptomFever.jpg" alt="Fever" class="imageF">
+            <div class="overlayF">
+                <div class="textF">When at least 100.4<sup>o</sup>F</div>
+            </div>
+            <br><br>
+        </div>
+        <div class="h">
+            <!--Shortness of breath-->
+            <img src="public/images/symptomBreath.jpg" alt="Breath" class="imageB">
+            <div class="overlayB">
+                <div class="textB">Discomfort while breathing(in most severe cases)</div>
+            </div>
+        </div>
+        </div>
+
+        <p style="text-align: center;margin-top: 20px;">*Symptoms may appear between two and 10 days after contracting the virus, but it may be up to 24 days.</p>
+    </div>
+    <br><br>
+
+    <!--TREATMENT-->
+    <div id="Treatment">
+        <h1 style="text-align: center; font-family: 'Raleway', sans-serif;">IF YOU ARE SICK</h1>
+        <div class="treat_flex">
+        <img src="public/images/Temperature.jpg" alt="Temperature">
+        <img src="public/images/Cough.jpg" alt="Dry Cough">
+        <img src="public/images/diff.jpg" alt="Difference in symptoms">
+        </div>
+        <ul class="w3-animate-left" style="font-size: x-large;text-align: center;list-style-type: none">
+            <li>Stay home except to get medical care.</li>
+            <li>Separate yourself from other people in your home. This is known as home isolation</li>
+            <li>Call ahead before visiting your doctor and wear a facemask</li>
+            <li>Cover your coughs and sneezes</li>
+            <li>Clean your hands often and avoid sharing personal household items</li>
+        </ul>
+    </div>
+    <br><br>
+
+    <!--PRECAUTIONS-->
+    <div id="Precaution">
+        <h1 style="text-align: center; font-family: 'Raleway', sans-serif;">PRECAUTIONS TO BE TAKEN</h1>
+        <ul class="w3-animate-left" style="font-size: x-large;">
+            <li>Carry a hand sanitiser with you to make frequent cleaning of your hands easy</li>
+            <li>Always wash your hands before you eat or touch your face</li>
+            <li>Be especially careful about touching things and then touching your face in busy airports and other public transport systems</li>
+            <li>Carry disposable tissues with you, cover your nose and mouth when you cough or sneeze and dispose of the tissue carefully (catch it, bin it, kill it)</li>
+            <li>Do not share snacks from packets or bowls that others are dipping their fingers into</li>
+            <li>Avoid shaking hands or cheek kissing if you suspect viruses are circulating</li>
+            <li>Regularly clean not only your hands but also commonly used surfaces and devices you touch or handle.</li>
+        </ul>
+    </div>
+    <br><br>
+
+    <!--MYTHS AND FACTS-->
+    <div id="MythsFacts">
+        <h1 style="text-align: center; font-family: 'Raleway', sans-serif;">MYTHS AND FACTS</h1>
+
+        <!--Automatic Slideshow of images taken from WHO-->
+        <div style="z-index: 200" class="slideshow-container">
+
+            <div class="mySlidesMyth" style="margin-bottom: 10px;">
+                <div class="numbertextMyth">1 / 6</div>
+                <img src="public/content/Myth1.jpg" style="width:100%;" alt="Myth">
+                <div class="textMyth">Courtesy: WHO</div>
+            </div>
+
+            <div class="mySlidesMyth" style="margin-bottom: 10px;">
+                <div class="numbertextMyth">2 / 6</div>
+                <img src="public/content/Myth2.png" style="width:100%;" alt="Myth">
+                <div class="textMyth">Courtesy: WHO</div>
+            </div>
+
+            <div class="mySlidesMyth " style="margin-bottom: 10px;">
+                <div class="numbertextMyth">3 / 6</div>
+                <img src="public/content/Myth3.jpg" style="width:100%;" alt="Myth">
+                <div class="textMyth">Courtesy: WHO</div>
+            </div>
+
+            <div class="mySlidesMyth" style="margin-bottom: 10px;">
+                <div class="numbertextMyth">4 / 6</div>
+                <img src="public/content/Myth4.jpg" style="width:100%;" alt="Myth">
+                <div class="textMyth">Courtesy: WHO</div>
+            </div>
+
+            <div class="mySlidesMyth" style="margin-bottom: 10px;">
+                <div class="numbertextMyth">5 / 6</div>
+                <img src="public/content/Myth5.jpg" style="width:100%;" alt="Myth">
+                <div class="textMyth">Courtesy: WHO</div>
+            </div>
+
+            <div class="mySlidesMyth" style="margin-bottom: 10px;">
+                <div class="numbertextMyth">6 / 6</div>
+                <img src="public/content/Myth6.jpg" style="width:100%;" alt="Myth">
+                <div class="textMyth">Courtesy: WHO</div>
+            </div>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+    <br><br>
+
+    <!--RECOVERY STORIES-->
+    <div id="Recovery">
+        <h1 style="text-align: center; font-family: 'Raleway', sans-serif;margin-bottom: 20px;">RECOVERY STORIES</h1>
+        <div class="flex-container">
+            <div class="storyUS">
+                <h2 style="text-align: center; font-family: 'Raleway', sans-serif; text-overflow: unset;">A Patient Recovered From Coronavirus Shares How To Handle It.</h2><br>
+                <p style="font-weight: lighter;">Coronavirus: The 37-year-old, who has a PhD in bioengineering, said she was sharing her story "to give people a little bit of hope" through her own relatively mild experience with the infection, which she treated herself from home.<br>
+                <a href="https://www.ndtv.com/world-news/a-patient-recovered-from-coronavirus-shares-how-to-handle-it-2193571" target="_blank">Read more...</a></p>
+            </div>
+            <div class="storyInd">
+                <h2 style="text-align: center; font-family: 'Raleway', sans-serif; text-overflow: unset;">Three coronavirus afflicted patients recover due to innovative treatment by doctors at Jaipur govt hospital</h2>
+                <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">The doctors at govt-run Sawai Man Singh Hospital in Jaipur treated the coronavirus patients with a combination of medicines used for treating HIV, malaria and swine flu<br>
+                <a href="https://www.nationalheraldindia.com/india/three-coronavirus-afflicted-patients-recover-due-to-innovative-treatment-by-doctors-at-jaipur-govt-hospital" target="_blank">Read more...</a></p>
+            </div>
+            <div class="storyIran">
+                <h2 style="text-align: center; font-family: 'Raleway', sans-serif; text-overflow: unset;">103-year-old Iran woman survives coronavirus: Report </h2><br><br>
+                <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">With this, she became the oldest patient to recover from the deadly disease.<br>
+                <a href="https://www.straitstimes.com/world/middle-east/103-year-old-iran-woman-survives-coronavirus-report" target="_blank">Read more...</a></p>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+    <!-- <div class="w3-container w3-center w3-animate-left">
+        <h1>Animation is Fun!</h1>
+        <p>The w3-animate-left class slides in an element from left.</p>
+    </div> -->
+    <script src="script.js"></script>
+
+</body>
+</html>

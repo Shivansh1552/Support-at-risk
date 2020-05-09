@@ -1,0 +1,609 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgb(250, 130, 236);
+}
+
+@font-face{
+    src: local('Pacifico Regular'), local('Pacifico-Regular'), url(https://fonts.gstatic.com/s/pacifico/v12/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2) format('woff2');
+    font-family: 'Pacifico';
+}
+
+.container{
+    padding: 20px;
+}
+.container img{
+    height: 100px;
+    display: block;
+/*
+    position: absolute;
+    left: 0px;
+*/
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Add a black background color to the top navigation */
+.container .topnav {
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    z-index: 1000;
+}
+
+/* Style the links inside the navigation bar */
+.container .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: solid;
+    font-size: 20px;
+    opacity: 1;
+}
+
+
+/* Change the color of links on hover */
+.container .topnav a:hover {
+    background-color: #F0F8F1;
+    color: black;
+    margin: 0 -1px;
+}
+
+/* Add an active class to highlight the current page */
+.container .topnav a.active {
+    background-color: rgb(240, 248, 241);
+    color: black;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.container .topnav .icon {
+    display: none;
+}
+
+/* Style the buttons */
+.container .topnav #btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: black;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Style the active class, and buttons on mouse-over */
+.active, #btn:hover {
+    background-color: cornsilk;
+    color: white;
+}
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 710px) {
+        .container .topnav a:not(:first-child) {display: none;}
+        .container .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 710px) {
+        .container .topnav .responsive {position: relative;}
+        .container .topnav.responsive a.icon {
+        position: relative; /*Here change was made*/
+        right: 0;
+        top: 0;
+    }
+    .container .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+/*Menu bar remains on the top*/
+/* Page content */
+.content {
+    padding: 16px;
+}
+
+/* The sticky class is added to the id myTopnav with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: auto;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 50px;
+}
+
+
+* {
+    box-sizing: border-box;
+  }
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+    position: relative;
+}
+
+  /* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+    cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    height: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+/*.numbertext {
+    color: #f2f2f2;
+    font-size: 20px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}*/
+
+/* Container for image text */
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+    font-size: medium;
+    font-family: 'Rubik', sans-serif;;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Six columns side by side */
+.column {
+    float: left;
+    width: 20%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+/*
+.container:nth-child(2n){
+    background-color: #9b9e9b29;
+}
+
+.container:nth-child(2n+1){
+    background-color: white;
+}
+*/
+#About{
+    text-align: justify;
+    border-radius: 10px;
+    font-size: medium;
+    width: 80%;
+    /*background-attachment: fixed;*/
+    font-family: 'Rubik', sans-serif;
+    margin: 0 auto;
+    background: white;
+    color: black;
+    padding: 5px;
+    font-size: large;
+}
+
+#History{
+    display: block;
+    text-align: justify;
+    font-family: 'Rubik', sans-serif;
+    padding: 15px;
+    background: #9b9e9b29;
+    color: black;
+     margin: 0 auto;
+    width: 80%;
+    font-size: large;
+}
+
+#NumberGame{
+    text-align: center;
+    display: block;
+    align-self: center;
+    font-family: 'Rubik', sans-serif;
+    color: cornsilk;
+}
+
+#NumberGame img{
+    align-items: center;
+}
+
+#Symptoms{
+    display: block;
+    text-align: justify;
+    font-family: 'Rubik', sans-serif;
+    padding: 5px;
+    background: white;
+    color: black;
+    font-size: large;
+    margin: 0 auto;
+/*
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+*/
+}
+
+.sympt_flex {
+      display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: space-between;
+}
+.h {
+    position: relative;
+    /*width: 40.5%;*/
+    display: inline-block;
+}
+
+.imageC {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+}
+
+.imageF {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+}
+
+.imageB {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+}
+
+.overlayC {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #008CBA;
+    overflow: hidden;
+    width: auto;
+    height: 0;
+    transition: .5s ease;
+}
+
+.overlayF {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(221, 189, 7);
+    overflow: hidden;
+    width: auto;
+    height: 0;
+    transition: .5s ease;
+}
+
+.overlayB {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(67, 211, 87);
+    overflow: hidden;
+    width: auto;
+    height: 0;
+    transition: .5s ease;
+}
+
+.h:hover .overlayC{
+    height: 100%;
+    width: 100%;
+}
+
+.h:hover .overlayF{
+    height: 100%;
+    width: 100%;
+}
+
+.h:hover .overlayB{
+    height: 100%;
+    width: 100%;
+}
+
+.textC {
+    white-space: nowrap;
+    color: white;
+    font-size: large;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.textF {
+    white-space: nowrap;
+    color: white;
+    font-size: large;
+    position: absolute;
+    /*overflow: hidden;*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.textB {
+    white-space: nowrap;
+    color: white;
+    font-size: large;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+#Treatment{
+    display: block;
+    text-align: justify;
+    font-family: 'Rubik', sans-serif;
+    padding: 5px;
+    background: lightgrey;
+    width: 95%;
+    margin: 0 auto;
+    color: black;
+    font-size: large;
+}
+
+#Treatment img{
+    /*height: 100%;
+    width: 100%;*/
+    display: inline-block;
+}
+/*#Treatment .w3-animate-left{position:relative;animation:animateleft 2s}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}} */
+
+.treat_flex{
+     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: space-between;
+    margin-bottom: 20px;
+}
+
+#Precaution{
+    display: block;
+    text-align: justify;
+    border-radius: 10px;
+    font-family: 'Rubik', sans-serif;
+    padding: 5px;
+    background: white;
+    width : 90%;
+    margin: 0 auto;
+    color: black;
+    font-size: large;
+}
+/*#Precaution .w3-animate-left{position:relative;animation:animateleft 2s}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}} */
+
+#MythsFacts{
+    display: block;
+    text-align: justify;
+    font-family: 'Rubik', sans-serif;
+    padding: 5px;
+    background: #9b9e9b29;
+    color: black;
+    width: 90%;
+    margin: 0 auto;
+    font-size: large;
+}
+
+* {box-sizing: border-box;}
+
+#MythFacts .mySlidesMyth {display: none;}
+#MythFacts img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+#MythsFacts .textMyth {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/6 etc) */
+#MythsFacts .numbertextMyth {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+#MythsFacts .dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+#MythsFacts .active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+#MythsFacts .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    #MythsFacts .textMyth {font-size: 11px}
+}
+
+#Recovery{
+    display: block;
+    text-align: justify;
+    font-family: 'Rubik', sans-serif;
+    padding: 5px;
+    background: white;
+    color: black;
+    font-size: large;
+}
+
+#Recovery .flex-container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+}
+
+#Recovery .flex-container > div .storyUS {
+    background-color: #f1f1f1;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    display: inline-block;
+}
+
+#Recovery .flex-container > div .storyInd {
+    background-color: #f1f1f1;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    display: inline-block;
+}
+
+#Recovery .flex-container > div .storyIran {
+    background-color: #f1f1f1;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    display: inline-block;
+}
+
+#Recovery .storyUS{
+    display: inline-block;
+    text-overflow: unset;
+    width: 30%;
+    text-align: justify;
+    font-family: 'Rubik', sans-serif;
+    padding: 10px;
+    color: black;
+    font-size: medium;
+    background: #9b9e9b29;
+    border: 2px solid black;
+}
+
+#Recovery .storyInd{
+    align-self: middle;
+    text-overflow: unset;
+    display: inline-block;
+    width: 30%;
+    text-align: justify;
+    font-family: 'Rubik', sans-serif;
+    padding: 10px;
+    color: black;
+    font-size: medium;
+    border: 2px solid black;
+    background: #9b9e9b29;
+}
+
+#Recovery .storyIran{
+    align-self: middle;
+    text-overflow: unset;
+    display: inline-block;
+    width: 30%;
+    text-align: justify;
+    font-family: 'Rubik', sans-serif;
+    padding: 10px;
+    color: black;
+    font-size: medium;
+    border: 2px solid black;
+    background: #9b9e9b29;
+}

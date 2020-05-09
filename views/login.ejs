@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>amity_project</title>
+    <link rel="stylesheet" href="public/loginproj2.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+  <body>
+      <%- include("./partials/navbar") -%>
+    <form action="/login" method="POST">
+    <h2>Login</h2>
+    <input type="text" name="username"  placeholder="username" required></input>
+    <input type="password" name="password"  placeholder="password" required></input>
+    <button >Login</button>
+    </form>
+  </body>
+</html>
